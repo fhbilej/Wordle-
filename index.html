@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" type="text/css" href="coba.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang di Wordle!</h1><br>
+        <p>Tebak 1 kata dengan 5 huruf:</p>
+        <input type="text" id="guessInput" maxlength="5">
+        <div>
+            <button id="guess" onclick="checkGuess()">Tebak</button>
+            <button id="reset" onclick="resetGame()">Reset</button>
+        </div>
+        <p id="feedback"></p>
+        <p class="attempts">Sisa kesempatan <span id="attempts">6</span></p><br>
+        <ul id="attemptsList" class="attempts-list"></ul>
+    </div>
+    <div class="instructions">
+        <div class="how-to-play">
+            <h3>Cara Bermain:</h3>
+            <p>Masukkan kata yang memiliki 5 huruf</p>
+            <p>Tebak kata sampai maksimal 6 kali</p>
+            <p>Setiap kata yang ditebak akan memiliki keterkaitan dengan kata sebenarnya</p>
+        </div>
+        <div class="rules">
+            <h3>Peraturan:</h3>
+            <p>Huruf berwarna hijau = Huruf dan posisi benar</p>
+            <p>Huruf berwarna kuning = Huruf benar posisi salah</p>
+            <p>Huruf berwarna merah = Huruf dan posisi salah</p>
+        </div>
+    </div>
+    <div class="rating">
+        <p>Berikan rating untuk permainan:</p>
+        <span class="star" onclick="rateGame(1)">★</span>
+        <span class="star" onclick="rateGame(2)">★</span>
+        <span class="star" onclick="rateGame(3)">★</span>
+        <span class="star" onclick="rateGame(4)">★</span>
+        <span class="star" onclick="rateGame(5)">★</span>
+    </div>
+    <script src="coba.js"></script>
+</body>
+</html>
